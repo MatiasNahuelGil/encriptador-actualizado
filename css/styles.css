@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+/***********VARIABLES **********/
+:root{
+    --bg-principal-color : #EBF4F6;
+    --bg-secondary-color : #171816;
+    --bg-tertiary-color  : #171816;
+    
+ 
+    --bg-gradiente-principal : #0F2027;
+    --bg-gradiente-secundario : #203A43;
+    --bg-gradiente-terciario : #2C5364;
+
+    --bg-gradiente-cuarto : #4286f4;
+    --bg-gradiente-quinto : #373B44;
+
+    --font : "Poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--bg-gradiente-terciario), var(--bg-gradiente-secundario), var(--bg-gradiente-principal));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--bg-gradiente-terciario), var(--bg-gradiente-secundario), var(--bg-gradiente-principal)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    
+    
+}
+
+/***********HEADER **********/
+
+.header{
+    padding: 20px 0px;
+}
+.header__titulo{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--bg-principal-color);
+}
+
+
+/***********MAIN**********/
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+    margin-bottom: 5em;
+}
+
+
+/***********SECCION A ENCRIPTAR **********/
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    
+}
+
+.contenedor__label{
+    text-align: center;
+}
+
+#encriptador{
+    padding-top: 20px;
+    text-align: center;
+    margin: 0px 10%;
+    height: 40%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1em;
+    font-family: var(--font);
+    border: 1px solid var(--bg-tertiary-color);
+    border-radius: 0.5em;
+}
+
+.contenedor__botones__encriptar{
+    text-align: center;
+   
+}
+
+
+
+/***********BOTONES **********/
+
+.btn{
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid var(--bg-secondary-color);
+    
+}
+
+.btn:hover{
+    background-color: var(--bg-secondary-color);
+    color: var(--bg-principal-color);
+}
+
+
+
+
+/***********SECCION PARA MOSTRAR EL MENSAJE ENCRIPTADO O DESENCRIPTADO **********/
+.contenedor__mensaje__encriptado{
+   display: flex;
+   flex-direction: column;
+   color: var(--bg-principal-color);
+   padding: 10px;
+   justify-content: center;
+   background: var(--bg-gradiente-quinto);  
+   background: -webkit-linear-gradient(to right, var(--bg-gradiente-cuarto), var(--bg-gradiente-quinto));  
+   background: linear-gradient(to right, var(--bg-gradiente-cuarto), var(--bg-gradiente-quinto)); 
+   border-radius: 10%;
+   width: 30%;
+   font-size: 1em;
+   margin-bottom: 3em; 
+}
+
+.boton__copiar{
+    margin-top: 15px;
+}
+
+.boton__copiar:hover{
+    border: 1px solid var(--bg-principal-color);
+}
+
+
+.muñeco__imagen{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50%;
+}
+
+.muñeco__imagenDespierto{
+    display: none;
+    margin: auto;
+    width: 70%;
+    height: 65%;
+}
+
+
+
+
+
+/***********FOOTER **********/
+
+.footer{
+    
+    color: #fff;
+    margin-top: auto;
+}
+
+.footer__texto{
+    background: #373B44;  
+    background: -webkit-linear-gradient(to right, var(--bg-gradiente-cuarto), var(--bg-gradiente-quinto));  
+    background: linear-gradient(to right, var(--bg-gradiente-cuarto), var(--bg-gradiente-quinto));    
+    padding: 10px 0px;
+    text-align: center;
+    background-color: var(--bg-secondary-color);
+}
+
+/***********MEDIA QUERIES MOVIL 500PX **********/
+@media (max-width: 500px){
+    .texto__encriptado{
+        display: none;
+    }
+    .btn{
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        width: 50%;
+    }
+    .muñeco__imagen{
+        display: none;
+    }
+    
+}
+
+
+/***********MEDIA QUERIES TABLET 1024PX **********/
+
+@media (max-width: 1024px){
+    .main{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .muñeco__imagen{
+        display: none;
+    }
+    .contenedor, .contenedor__mensaje__encriptado {
+            width: 100%;
+        }
+    .contenedor {
+            height: 70%;
+            gap: 20px;
+        }
+    .contenedor__mensaje__encriptado {
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            width: 70%; 
+            margin: auto; 
+        }
+        
+     .muñeco__imagenDespierto{
+        height: 1px;
+        visibility: hidden;
+     }   
+    
+}

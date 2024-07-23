@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Encriptador Challenge</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo__imagen" src="/assets/Logo.png" alt="logo de alura">
+        <h1 class="header__titulo">Encriptador Challenge</h1>
+    </header>
+
+    <main class="main">
+
+        <section class="contenedor">
+                
+                <textarea name="encriptador" id="encriptador" placeholder="Ingrese el texto aqui" maxlength="150"></textarea>
+           
+                <div class="contenedor__botones__encriptar">
+                   <img src="/assets/Exclamacion.png" alt="signo de exclamación"><b>Solo letras minúsculas y sin acento</b> <br>
+                   <button onclick="encriptar()" class="btn boton__encriptar">Encriptar</button> 
+                   <button onclick="desencriptar()"  class="btn boton__desencriptar">Desencriptar</button> 
+               </div>
+
+               
+        </section>
+        
+        <section class="contenedor__mensaje__encriptado">
+
+            <img class="muñeco__imagen" src="/assets/wait.svg" alt="muñeco durmiendo">
+            <img class="muñeco__imagenDespierto"src="/assets/muñecoDespierto.png" alt="muñeco despierto">
+            <div class="contenedor__botones__encriptar">
+                <h2 class="mensaje__no__encontrado">Ningún mensaje fue encontrado</h2>
+                <p class="texto__encriptado">Ingresa el texto que desees encriptar o desencriptar</p>
+                <button  onclick="copiar()" class="btn boton__copiar ">Copiar</button>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+         <p class="footer__texto">&#169 2024 Desarrollado por Gil Matias </p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
